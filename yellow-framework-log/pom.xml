@@ -19,9 +19,34 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+
+		<!-- log4j2用到的高性能队列  -->
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>3.4.4</version>
+		</dependency>
+
+
+		<!--以下依赖的 scope 是 provided，表示编译时不打包，运行时由使用者提供-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<!-- 排除默认的日志组件 -->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- 引入springboot 的 log4j2 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>

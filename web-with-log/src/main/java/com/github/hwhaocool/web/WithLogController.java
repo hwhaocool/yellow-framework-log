@@ -1,4 +1,4 @@
-package com.github.hwhaocool.web.web;
+package com.github.hwhaocool.web;
 
 import org.joda.time.DateTime;
 import org.slf4j.Logger;

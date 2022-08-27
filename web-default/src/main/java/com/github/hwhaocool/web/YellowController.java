@@ -1,4 +1,4 @@
-package com.github.hwhaocool;
+package com.github.hwhaocool.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
