@@ -1,5 +1,7 @@
 package com.github.hwhaocool;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +14,12 @@ import java.util.Map;
 @RestController
 public class YellowController {
 
-    @GetMapping("/test")
+    private static final Logger LOGGER = LoggerFactory.getLogger(YellowController.class);
+
+    @GetMapping("/test1")
     public Map<String, String> test() {
+
+        LOGGER.info("test1");
 
         return Map.of("data", "ok");
     }

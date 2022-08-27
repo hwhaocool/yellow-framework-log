@@ -1,5 +1,7 @@
-package com.github.hwhaocool;
+package com.github.hwhaocool.web.log;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.bind.BindResult;
 import org.springframework.boot.context.properties.bind.Bindable;
 import org.springframework.boot.context.properties.bind.Binder;
@@ -21,6 +23,8 @@ import java.util.List;
  * @since 2022/8/21 17:48
  */
 public class YellowLog4J2LoggingSystem extends Log4J2LoggingSystem {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(YellowLog4J2LoggingSystem.class);
 
     public YellowLog4J2LoggingSystem(ClassLoader classLoader) {
         super(classLoader);
@@ -49,6 +53,7 @@ public class YellowLog4J2LoggingSystem extends Log4J2LoggingSystem {
 
             // 5. 加载
             loadConfiguration(getPackagedConfigFile(logConfigFile), logFile, getOverrides(initializationContext));
+            LOGGER.info("load {}", logConfigFile);
 
             // 6. 自适应包名
             autofixPackage();

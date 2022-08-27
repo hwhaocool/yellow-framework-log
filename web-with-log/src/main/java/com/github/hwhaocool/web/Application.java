@@ -1,4 +1,4 @@
-package com.github.hwhaocool;
+package com.github.hwhaocool.web.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
