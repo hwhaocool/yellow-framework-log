@@ -42,6 +42,8 @@ public class YellowLog4J2LoggingSystem extends Log4J2LoggingSystem {
             // 1. 得到当前的环境(spring.profile.active)
             ProfileEnum profile = getProfile(initializationContext.getEnvironment());
 
+            ProfileHolder.setProfileEnum(profile);
+
             // 2. 当前环境应该加载的配置文件
             String logConfigFile = getConfigFile(profile);
 

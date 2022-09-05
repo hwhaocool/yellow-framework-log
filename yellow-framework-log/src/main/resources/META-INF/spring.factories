@@ -1,3 +1,5 @@
 # Logging Systems
 org.springframework.boot.logging.LoggingSystemFactory=\
 com.github.hwhaocool.log.YellowLog4J2LoggingSystem.Factory
+
+org.springframework.context.ApplicationContextInitializer=com.github.hwhaocool.log.YellowApplicationContextInitializer
