@@ -1,6 +1,14 @@
 yellow-framework-log
 ---
 
+## 介绍
+基于`log4j2`扩展的日志组件，提供了以下功能
+1. 自动开启log4j2异步
+2. 根据不同环境信息(spring.profile)，提供不同的输出配置(console, log等)
+3. 提供了一套 pattern
+
+实现思路可以看[博客](https://www.jianshu.com/p/32bd112274eb)
+
 ## 子工程
 
 |name|desc|  
